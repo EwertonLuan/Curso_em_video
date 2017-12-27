@@ -3,9 +3,9 @@ lado_1 = int(input('Digite o primeiro lado: '))
 lado_2 = int(input('Digite o segundo lado: '))
 lado_3 = int(input('Digite o terceiro lado: '))
 
-triangulo = (lado_1-lado_2) < lado_3 < (lado_1+lado_2)
+triangulo = teste = lado_1 < lado_2 + lado_3 and lado_2 < lado_1 + lado_3 and lado_3 < lado_2 +lado_1 #(lado_1<lado_2) < lado_3 < (lado_1+lado_2)
 
-if triangulo:
+if triangulo == True:
     print('E possivel criar um triangulo com as medidas {}, {}, {}'.format(lado_1, lado_2, lado_3))
     if lado_1 == lado_2 and lado_1 == lado_3:
         print('Triangulho equilátero ')

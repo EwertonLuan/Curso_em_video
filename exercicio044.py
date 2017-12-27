@@ -1,23 +1,20 @@
-print('\033[1;35m###\033[m' * 10 + "\nCalculo de pagamento\n" + '\033[1;35m###\033[m' * 10)
-
+print('\033[1;35m###\033[m' * 20 + "\n{:=^50}\n".format('Calculo de pagamento') + '\033[1;35m###\033[m' * 20)
+# {:^} Centraliza
 produto = float(input('Qual o valor do prouto: '))
-a_vista = produto - (produto * 10) / 100
-cartao = produto - (produto * 5) / 100
-cartao_2 = produto
-cartao_3 = (produto * 20) / 100 + produto
 
-print("""\nÀ vista no dinheiro/cheque [1]
-À vista no cartão [2]
-Em até 2x no catão [3]
-3x ou mais no cartão  [4]\n""")
+print("""\n[1] À vista no dinheiro/cheque
+[2] À vista no cartão 
+[3] Em até 2x no catão
+[4] 3x ou mais no cartão\n""")
 
 pagamento = int(input('Qual a Forma de pagamento: '))
 
 if pagamento == 1:
-    print('Você escolheu a opção 1, o valor a ser pago é de R${:.2f}'.format(a_vista))
+    total = produto - (produto * 10) / 100
 elif pagamento == 2:
-    print('Você escolheu a opção 2, o valor a ser pago é de R${:.2f}'.format(cartao))
+    total = produto - (produto * 5) / 100
 elif pagamento == 3:
-    print('Você escolheu a opção 2, o valor a ser pago é de R${:.2f}'.format(cartao_2))
+    total = produto
 else:
-    print('Você escolheu a opção 1, o valor a ser pago é de R${:.2f}'.format(cartao_3))
+    total = (produto * 20) / 100 + produto
+print('Você escolheu a opção {}, o valor a ser pago é de R${:.2f}'.format(pagamento,total))
