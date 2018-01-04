@@ -4,7 +4,6 @@ f = primeiro
 c = 0
 
 while c <= 9:
-    print(f, end= ' '1)
+    print(f, end=' ')
     f += ra
     c += 1
-
