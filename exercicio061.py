@@ -1,9 +1,10 @@
-primeiro = int(input('O numero da sua pa:'))
+primeiro = int(input('O primeiro termo da sua pa:'))
 ra = int(input('A razão da sua PA: '))
 f = primeiro
-c = 0
+c = 1
 
-while c <= 9:
-    print(f, end=' ')
+while c <= 10:
+    print(f, end='')
+    print(' -> ' if c < 10 else ' -> FIM ', end='')
     f += ra
     c += 1
