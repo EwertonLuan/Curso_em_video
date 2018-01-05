@@ -1,21 +1,32 @@
-c = 0
+n1 = int(input('Digite o primeiro valor: '))
+n2 = int(input('Digite o segundo valor: '))
+escolha = 0
 
-while c == 0:
+
+while escolha != 5:
     print('''[1] somar
 [2] multiplicar
 [3] maior
-[4] sair do programaz\n''')
+[4] novos numeros
+[5] sair do programa\n''')
+
     escolha = int(input('Escolha uma opção: '))
-    n1 = int(input('Digite o primeiro valor: '))
-    n2 = int(input('Digite o segundo valor: '))
-    resultado = ''
     if escolha == 4:
-        c += 1
-    if escolha != 4:
-        if escolha == 1:
-            resultado = n1 + n2
-        elif escolha == 2:
-            resultado = n1 * n2
-        elif escolha == 3:
-            resultado = n1 / n2
-    print('O resultado a operação é {:.2f}'.format(resultado))
+        n1 = int(input('Digite o primeiro valor: '))
+        n2 = int(input('Digite o segundo valor: '))
+    elif escolha == 1:
+        resultado = n1 + n2
+        print('A soma entre {} e {} é igual a {}'.format(n1, n2, resultado))
+    elif escolha == 2:
+        resultado = n1 * n2
+        print(' {} x {} = {}'.format(n1, n2, resultado))
+    elif escolha == 3:
+        if n1 > n2:
+            maior = n1
+        else:
+            maior = n2
+        print('Entre {} e {} o meior numero é {}'.format(n1, n2, maior))
+    elif escolha == 5:
+        print('Saindo do programa')
+    else:
+        print('\n\033[1;31mOpção invalida tente novamente!\033[m\n')
