@@ -1,10 +1,11 @@
 from random import randint
+
 ganhou = 0
 while True:
     pi = str(input('Escolha P(par) ou I(impar): ')).upper().strip()
+    while pi not in 'PI':
+        pi = str(input('Escolha P(par) ou I(impar): ')).upper().strip()
     n = int(input('Digite o um numero: '))
-    while not 'PI' in n:
-        n = int(input('Digite o um numero: '))
     if pi == 'P':
         cpu = 'I'
     else:
@@ -27,4 +28,4 @@ while True:
     else:
         print('Você perdeu')
         break
-print(f'Voce ganhou {ganhou} e a maquina escolheu na ultima {s_pi} e o número {cpu_num}')
+print(f'Voce ganhou {ganhou} e a maquina escolheu {s_pi} na ultima')
