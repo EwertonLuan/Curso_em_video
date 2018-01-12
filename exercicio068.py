@@ -1,20 +1,18 @@
 from random import randint
-
 ganhou = 0
 while True:
-    pi = str(input('Escolha P(par) ou I(impar): ')).upper().strip()
+    pi = str(input('Escolha P(par) ou I(impar): ')).upper().strip()[0]
     while pi not in 'PI':
-        pi = str(input('Escolha P(par) ou I(impar): ')).upper().strip()
-    n = int(input('Digite o um numero: '))
+        pi = str(input('Escolha P(par) ou I(impar): ')).upper().strip()[0]
     if pi == 'P':
         cpu = 'I'
     else:
         cpu = 'P'
-    cpu_num = randint(1, 10)
+    n = int(input('Digite o um numero: '))
+    cpu_num = randint(0, 10)
     soma = cpu_num + n
     par = ''
     impar = ''
-
     if soma % 2 == 0:
         par = 'P'
         s_pi = 'PAR'
