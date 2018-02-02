@@ -1,5 +1,0 @@
-frase = str(input('Digite uma frase: ')).strip()
-frase_m = frase.upper()
-print('a letra A aparece {} vezes'.format(frase_m.count('A')))
-print('A primeira letra A aparece na posição {}'.format(frase_m.find('A')+1))
-print('A primeira letra A aparece na posição {}'.format(frase_m.rfind('A')+1))

@@ -11,7 +11,7 @@ if frase == revera:
 else:
     print('Essa frase não é um palindromo')
 
-# Outra resolução
+# Solução do video
 '''frase = str(input('Frase: ')).strip().upper()
 separa = frase.split()  #Separa as frases em uma lista
 junta = ''.join(separa)  #Remove os espaços do meio da frase frase

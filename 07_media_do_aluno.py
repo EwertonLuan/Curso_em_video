@@ -1,5 +1,5 @@
 print('\033[1;34m<^>\033[m' * 30
-      + '\n \n\033[4;1;32mCaucule a media da nota das provas\033[m\n')
+      + '\n \n\033[4;1;32mCaucule a media do aluno\033[m\n')
 print('Legenda:\n'+'\033[1;44m  \033[m Nota Azul\n'+'\033[1;41m  \033[m Nota vermelha\n')
 print('\033[1;34m<^>\033[m' * 30 + '\n')
 
